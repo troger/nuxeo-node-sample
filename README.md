@@ -4,7 +4,7 @@ Sample use of the node.js [Nuxeo client](https://github.com/nuxeo/nuxeo-js-clien
 
 # How to run
 
-You can change the values for you own Nuxeo server in the `sample.js` file, and then run the following:
+You can change the values for you own Nuxeo Platform server in the `sample.js` file, and then run the following:
 
     $ npm install
     $ node sample.js [--dry-run]
