@@ -1,0 +1,8 @@
+{
+  "name": "nuxeo-node-sample",
+  "version": "0.1.0",
+  "description": "Sample use of the node.js Nuxeo client.",
+  "main": "sample.js",
+  "author": "Thomas Roger",
+  "license": "MIT"
+}
