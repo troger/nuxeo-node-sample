@@ -20,7 +20,7 @@ if (args.length > 0 && args[0] === '--dry-run') {
 // connect to nuxeo
 client.connect(function(error, client) {
   if (error) {
-    console.log('Cannot connect to Nuxeo server');
+    console.error('Cannot connect to Nuxeo server');
     throw new Error(error);
   }
 
@@ -51,7 +51,7 @@ client.connect(function(error, client) {
           doc.set({'dc:title' : doc.properties['file:content'].name })
           doc.save(function(error, data) {
             if (error) {
-              console.log('Error while saving document');
+              console.error('Error while saving document');
               throw new Error(error);
             }
             console.log("Successfully renamed '" + data.title + '"');
@@ -68,7 +68,7 @@ client.connect(function(error, client) {
 
   request.execute(function(error, data) {
     if (error) {
-      console.log('Error while fetching documents');
+      console.error('Error while fetching documents');
       throw new Error(error);
     }
     totalDocsToUpdate = data.totalSize;
@@ -80,7 +80,7 @@ client.connect(function(error, client) {
     for (var i = 1; i < data.pageCount; i++) {
       request.query({ currentPageIndex: i }).execute(function(error, data) {
         if (error) {
-          console.log('Error while fetching documents');
+          console.error('Error while fetching documents');
           throw new Error(error);
         }
 
